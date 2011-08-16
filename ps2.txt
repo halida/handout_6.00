@@ -1,0 +1,21 @@
+problem 1:
+
+50 = 6 * 5 + 20
+51 = 6 * 7 + 9
+52 = 6 * 2 + 20 * 2
+53 = 6 * 4 + 9 + 20
+54 = 6 * 9
+55 = 6 + 9 + 20 * 2
+
+problem 2:
+assume all the number can be presented in McNuggets pack are in Set(Nc).
+for any number N >= x:
+t = (N - x) % 6
+p = (N - x - t) / 6, p is positive integer.
+and N = p * 6 + (x + t)
+t is in (0, 1, 2, 3, 4, 5),
+so (x + t) is in Set(Nc)
+and N = 6 * p + (x + t), so N is in Set(Nc).
+Theorem proved.
+
+
