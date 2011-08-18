@@ -6,27 +6,18 @@ module: ps1b
 from math import *
 
 def process(n):
-    count = 2
-    v = 3
     result = log(2) + log(3)
 
-    while count < n:
+    for v in range(4, n):
         for i in range(2, v):
             if v % i == 0:
                 break
         else:
-            count += 1
             result += log(v)
-        v += 1
 
-    print n, ": ", result
+    print n, ": ", result, ": ", result/float(n)
     return n
 
-x = range(11, 200)
-y = [process(i)
-     for i in range(11, 200)]
+for i in range(11, 20000):
+    process(i)
 
-import numpy as np
-import matplotlib.pyplot as plt
-
-plt.plot(x, y)
