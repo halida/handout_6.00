@@ -11,9 +11,9 @@ problem 2:
 assume all the number can be presented in McNuggets pack are in Set(Nc).
 set: x = 50
 for any number N >= x:
-set: t = (N - x) % 6
+set: t = (N - x) % 6 , so t is in (0, 1, 2, 3, 4, 5),
 set: p = (N - x - t) / 6, we can indicate that p is non negative integer(remaining is t).
-so N = p * 6 + (x + t) t is in (0, 1, 2, 3, 4, 5),
+so N = p * 6 + (x + t)
 and (x + t) is in Set(Nc) and p * 6 is in Set(Nc).
 so N is in Set(Nc).
 Theorem proved.
